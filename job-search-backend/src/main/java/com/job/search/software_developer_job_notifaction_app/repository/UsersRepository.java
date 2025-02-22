@@ -14,5 +14,5 @@ public interface UsersRepository extends JpaRepository<Users, Integer> {
     Users findByFirstNameAndLastName(String firstName, String lastName);
     Users findByFirstName(String firstName);
     Users findByLastName(String lastName);  
-    Users findByUserPreferences(UserPreferences userPrefs);
+    void deleteById(int id);
 }

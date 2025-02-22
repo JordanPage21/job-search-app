@@ -1,10 +1,12 @@
 package com.job.search.software_developer_job_notifaction_app.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.job.search.software_developer_job_notifaction_app.entity.Users;
 import com.job.search.software_developer_job_notifaction_app.repository.UsersRepository;
 
+@Service
 public class UsersService {
     
     @Autowired
@@ -29,5 +31,9 @@ public class UsersService {
 
     public Users findByFirstNameAndLastName(String firstName, String lastName) {
         return usersRepository.findByFirstNameAndLastName(firstName, lastName);
+    }
+
+    public void deleteById(int id) {
+        usersRepository.deleteById(id);
     }
 }

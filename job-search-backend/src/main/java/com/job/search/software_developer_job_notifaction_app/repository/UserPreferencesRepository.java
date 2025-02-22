@@ -13,7 +13,6 @@ public interface UserPreferencesRepository extends JpaRepository<UserPreferences
     UserPreferences findById(int id);
     UserPreferences findByUserId(int userId);
     UserPreferences findByUser(Users user);
-    UserPreferences findByUser_Email(String email);
     List<UserPreferences> findByStackName(String stackName);
     List<UserPreferences> findByJobTitle(String jobTitle);
     List<UserPreferences> findByLocation(String location);

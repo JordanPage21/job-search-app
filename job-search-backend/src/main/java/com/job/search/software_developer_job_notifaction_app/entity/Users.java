@@ -2,6 +2,8 @@ package com.job.search.software_developer_job_notifaction_app.entity;
 
 import java.sql.Timestamp;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import com.job.search.software_developer_job_notifaction_app.enums.NotificationFrequency;
 
 import jakarta.persistence.Column;
@@ -52,10 +54,7 @@ public class Users {
     @Enumerated(EnumType.STRING)
     private NotificationFrequency notificationFrequency;
 
+    @CreationTimestamp
     @Column (name="created_at")
     private Timestamp createdAt;
-
-    @OneToOne
-    @JoinColumn(name="user_preferences_id", referencedColumnName = "id")
-    private UserPreferences userPreferences;
 }
