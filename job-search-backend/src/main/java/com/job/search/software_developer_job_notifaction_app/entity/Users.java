@@ -11,6 +11,8 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -32,7 +34,7 @@ public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column( name="user_id")
-    private int userId;
+    private int id;
 
     @Column( name="first_name", nullable = false)
     private String firstName;
@@ -52,4 +54,8 @@ public class Users {
 
     @Column (name="created_at")
     private Timestamp createdAt;
+
+    @OneToOne
+    @JoinColumn(name="user_preferences_id", referencedColumnName = "id")
+    private UserPreferences userPreferences;
 }

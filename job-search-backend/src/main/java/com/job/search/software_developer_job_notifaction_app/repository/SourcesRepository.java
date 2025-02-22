@@ -7,5 +7,6 @@ import com.job.search.software_developer_job_notifaction_app.entity.Sources;
 
 @Repository
 public interface SourcesRepository extends JpaRepository<Sources, Integer> {
-    
+    Sources findById(int id);
+    Sources findByName(String name);
 }

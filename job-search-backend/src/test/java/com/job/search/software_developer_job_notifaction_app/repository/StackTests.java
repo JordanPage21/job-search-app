@@ -21,7 +21,7 @@ class StackTests {
 
     @Test
     void testFindByName(){
-        assertEquals(stackRepository.findByName("MERN").getStackId(), 1);
+        assertEquals(stackRepository.findByName("MERN").getId(), 1);
     }
 
     @Test
@@ -29,7 +29,7 @@ class StackTests {
         Stack stack = new Stack();
         stack.setName("TestStack");
         stackRepository.save(stack);
-        assertEquals(stackRepository.findByName("TestStack").getStackId(), stack.getStackId());
+        assertEquals(stackRepository.findByName("TestStack").getId(), stack.getId());
 
         stackRepository.delete(stack);
     }

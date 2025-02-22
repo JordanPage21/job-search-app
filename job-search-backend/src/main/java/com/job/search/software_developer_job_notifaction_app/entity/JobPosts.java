@@ -30,7 +30,7 @@ public class JobPosts {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column( name="job_id", nullable = false)
-    private int jobId;
+    private int id;
 
     @Column( nullable = false)
     private String title;

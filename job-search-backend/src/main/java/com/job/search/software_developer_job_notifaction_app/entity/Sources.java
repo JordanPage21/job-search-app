@@ -26,7 +26,7 @@ public class Sources {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "source_id")
-    private int sourceId;
+    private int id;
 
     @Column
     private String name;

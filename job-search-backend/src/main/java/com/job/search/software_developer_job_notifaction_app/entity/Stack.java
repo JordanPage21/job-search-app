@@ -26,7 +26,7 @@ public class Stack {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "stack_id")
-    private int stackId;
+    private int id;
 
     @Column
     private String name;
